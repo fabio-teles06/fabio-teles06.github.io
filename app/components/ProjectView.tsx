@@ -15,7 +15,7 @@ interface Project {
 export default function ProjectView({ project }: { project: Project }) {
     return (
         <div className="flex flex-col items-center gap-4">
-            <img src={project.image} alt={project.name} className="rounded-lg" />
+            <img src={project.image} alt={project.name} className="rounded-lg max-w-72" />
             <h2 className="text-2xl font-bold">{project.name}</h2>
             <p className="text-center">{project.description}</p>
             <div className="flex gap-4">
@@ -24,7 +24,7 @@ export default function ProjectView({ project }: { project: Project }) {
                 ))}
             </div>
             <Link href={project.url}>
-                <h6 className="flex items-center gap-2">
+                <h6 className="flex items-center gap-2 hover:scale-110 transition-all delay-150 hover:delay-0">
                     <FaGithub size={24} />
                     <span>Ver no Github</span>
                 </h6>

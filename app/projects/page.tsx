@@ -10,7 +10,7 @@ export default function Page() {
                     {
                         name: "Portifólio",
                         description: "Meu portifólio pessoal",
-                        image: "https://github.com/fabio-teles06/portifolio/foto.png",
+                        image: "https://github.com/fabio-teles06/portifolio/blob/main/foto.png?raw=true",
                         url: "https://github.com/fabio-teles06/portifolio",
                         tools: ["react", "nextjs", "tailwind"]
                     }
