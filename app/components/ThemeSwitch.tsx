@@ -25,7 +25,7 @@ export const ThemeSwitch: React.FC = () => {
     const [currentTheme, setCurrentTheme] = React.useState<'light' | 'dark'>('light');
 
     const getColorPreference = (): 'light' | 'dark' => {
-        if (typeof window !== undefined) {
+        if (typeof window !== "undefined") {
             const storedPreference = localStorage.getItem(storageKey);
             if (storedPreference) {
                 return storedPreference as 'light' | 'dark';

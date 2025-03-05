@@ -58,6 +58,14 @@ export default function Page() {
         {
             name: "java",
             tooltip: "Java"
+        },
+        {
+            name: "expo",
+            tooltip: "Expo"
+        },
+        {
+            name: "flutter",
+            tooltip: "Flutter"
         }
     ];
 
