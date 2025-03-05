@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: {
+    types: string,
     children: React.ReactNode
 }) {
     return (
