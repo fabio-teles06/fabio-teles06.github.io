@@ -1,44 +1,84 @@
 import Link from "next/link";
 import React from "react";
 
+import { stackIconsURL } from "./@types/StackIconsURL";
+import Tooltip from "./components/Tooltip";
+
 export default function Page() {
 
     const habilities = [
         {
-            name: "HTML",
-            icon: "html5",
+            name: "html5",
+            tooltip: "HTML"
         },
         {
-            name: "Next",
-            icon: "next",
+            name: "css3",
+            tooltip: "CSS"
         },
         {
-            name: "React",
-            icon: "react",
+            name: "javascript",
+            tooltip: "JavaScript"
         },
         {
-            name: "Node",
-            icon: "node",
+            name: "typescript",
+            tooltip: "TypeScript"
         },
-    ]
+        {
+            name: "react",
+            tooltip: "React"
+        },
+        {
+            name: "nextjs",
+            tooltip: "Next.js"
+        },
+        {
+            name: "nodejs",
+            tooltip: "Node.js"
+        },
+        {
+            name: "express",
+            tooltip: "Express"
+        },
+        {
+            name: "mongodb",
+            tooltip: "MongoDB"
+        },
+        {
+            name: "mysql",
+            tooltip: "MySQL"
+        },
+        {
+            name: "git",
+            tooltip: "Git"
+        },
+        {
+            name: "csharp",
+            tooltip: "C#"
+        },
+        {
+            name: "java",
+            tooltip: "Java"
+        }
+    ];
 
     return (
-        <section className="flex flex-1 items-center">
-            <img src="images/profile.jpg" alt="Profile Picture" className="rounded-full w-96" />
+        <section className="flex flex-1 items-center flex-col gap-8 md:flex-row md:gap-48 justify-evenly">
+            <img src="images/profile.jpg" alt="Profile Picture" className="rounded-full w-60 m-3 md:w-96" />
 
-            <div className="ml-8">
+            <div className="mx-3">
                 <h1 className="text-4xl font-bold">Fabio Teles</h1>
                 <p className="text-2xl mt-4">Desenvolvedor Web FullStack</p>
 
-                <div className="flex flex-wrap gap-3 mt-8">
+                <div className="flex flex-wrap gap-3 mt-8 max-w-xl">
                     {habilities.map((hability) => (
-                        <div key={hability.name} className="flex items-center gap-2 bg-gray-200 p-2 rounded-md">
-                            <img src={`images/icons/${hability.icon}.svg`} alt={hability.name} className="w-6 h-6" />
-                            <span className="text-sm font-bold dark:text-black">{hability.name}</span>
-                        </div>
+                        <Tooltip key={hability.name} text={hability.tooltip}>
+                            <img src={stackIconsURL[hability.name]} alt={hability.name} className="dark:bg-white dark:p-1 dark:rounded-xl w-9 h-9" />
+                        </Tooltip>
                     ))}
                 </div>
             </div>
+
+
         </section>
     );
 }

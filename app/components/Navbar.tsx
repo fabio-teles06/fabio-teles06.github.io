@@ -2,18 +2,17 @@ import Link from "next/link";
 import { ThemeSwitch } from "@/components/ThemeSwitch";
 
 const navItems = {
-  "/blog": { name: "Blog" },
-  "/projects": { name: "Projects" },
-  "/photos": { name: "Photos" },
+  "/" : { name: "Início" },
+  "/projects": { name: "Projetos" },
 };
 
 export function Navbar() {
   return (
-    <nav className="py-5">
+    <nav className="py-3 m-5 sm:m-3">
       <div className="flex flex-col md:flex-row md:items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="text-3xl font-semibold tracking-tight">
-            Início
+            Biodev
           </Link>
         </div>
         <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
